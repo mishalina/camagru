@@ -17,7 +17,6 @@
 		<h2>What Camagru is ?</h2>
 		<h3>Camagru is a project from IT School '21' based in Moscow.<br/>
 		It consists of a web application allowing registered users to take photos from their camera or to upload images.<br/>
-		To save a photo, the user needs to add a picture from the provided list, then both images are merged server-side.<br/>
 		No framework or external library is allowed to produce this project, only browser's native javascript.<br/>
 		For any questions, encountered issues or anything else please use the form below to contact me.<br/>
 		</h3>

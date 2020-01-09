@@ -20,7 +20,6 @@ li {
 	}
 
 li:last-child {
-	border-right: none;
 	border-left: 1px solid #bbb;
 	}
 

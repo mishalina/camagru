@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+	session_start(); 
+	//require_once("config/pdo.php");
+?>
 <!DOCTYPE html>
 <html>
 	<head>

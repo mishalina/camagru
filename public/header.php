@@ -9,7 +9,10 @@
 		if (isset($_SESSION['logged']))
 			echo "<li style='float:right'><a href='".$root."server/logout.php'>Logout</a></li>";
 		else
-			echo "<li style='float:right'><a href='".$root."'>Log in</a></li>";
+		{	
+			echo "<li style='float:right'><a href='".$root."identification/registration.php'>Don't have an account yet ?</a></li>";	
+			echo "<li style='float:right'><a href='".$root."identification/connection.php'>Log in</a></li>";
+		}
 	?>
 	</ul>
 </header>
