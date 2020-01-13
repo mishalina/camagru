@@ -2,7 +2,7 @@
     <h1>Camagru</h1>
     <h3 id="main_msg" style="display: none"></h3>
     <div id="form1" class="forms">
-        <h2>Log in</h2>
+        <h2>Login</h2>
         <form id="login_form">
             <input id="login" type="text" placeholder="Username" minlength="5" maxlength="20" required>
             <input id="passwd" type="password" placeholder="Password" minlength="8" maxlength="20" required>
