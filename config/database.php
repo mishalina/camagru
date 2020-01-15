@@ -1,12 +1,16 @@
 <?php
-$DB_DSN = 'mysql:dbname=camagru;host=127.0.0.1;charset=UTF8';
-$DB_NEW_DSN = 'mysql:dbname=camagru;host=127.0.0.1;charset=UTF8';
-$DB_USER = "root";
-$DB_PASSWORD = "";
-$DB_NAME = "camagru";
-$OPT = [
-    PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-    PDO::ATTR_EMULATE_PREPARES   => false,
-];
+// PDO instantiation to initiate MySQL server connection, then create db
+$db_dsn = 'mysql:host=localhost;charset=utf8';
+$db_user = 'root';
+$db_pass = '';
+try {
+    $db = new PDO($db_dsn, $db_user, $db_pass);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $db->query("CREATE DATABASE IF NOT EXISTS camagru CHARACTER SET utf8;
+						USE camagru");
+}
+catch (PDOException $e) {
+    echo "Database connection failed: " . $e->getMessage() . PHP_EOL;
+    die();
+}
 ?>

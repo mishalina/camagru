@@ -39,6 +39,7 @@ function reset_msgs() {
     if (msg3.innerHTML !== "" || msg3.style.display !== "none") {
         msg3.innerHTML = "";
         msg3.style.display = "none";
+
     }
     if (msg4.innerHTML !== "" || msg4.style.display !== "none") {
         msg4.innerHTML = "";
