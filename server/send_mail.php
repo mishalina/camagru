@@ -2,7 +2,7 @@
 function  send_confirmation_mail($login, $email, $token) {
     $subject = "Camagru - Account creation confirmation";
     $link = "http://".$_SERVER['HTTP_HOST'].substr($_SERVER['SCRIPT_NAME'], 0, (strpos($_SERVER['SCRIPT_NAME'], "/", 1) + 1));
-    $validation_link = $link."public/account_confirm.php?login=".$login."&token=".$token;
+    $validation_link = $link."../public/account_confirm.php?login=".$login."&token=".$token;
     $content = "<html>
                 <head>
                   <title>Camagru - Account creation confirmation</title>

@@ -81,9 +81,9 @@ function	register_validate() {
                 }
             }
         }
-        xhr.open("POST", "server/register.php", true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        xhr.send("login=" + login + "&passwd=" + passwd1 + "&email=" + email);
+        xhr.open("POST", 'server/register.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send('login=' + login + '&passwd=' + passwd1 + '&email=' + email);
     }
 }
 
