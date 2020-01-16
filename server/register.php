@@ -17,7 +17,7 @@ if ($res[0] > 0)
 if ($response !== "")
     echo ($response);
 else {
-    $token = bin2hex(random_bytes(16));
+    $token = bin2hex(openssl_random_pseudo_bytes(16));
     if (send_confirmation_mail($login, $email, $token) == true) {
         $db->query("INSERT INTO users (login, password, email, confirm_hash)
                 VALUES (".$db->quote($login).", ".$db->quote($passwd).", ".$db->quote($email).", ".$db->quote($token).")");
