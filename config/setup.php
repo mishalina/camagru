@@ -15,7 +15,20 @@ catch (PDOException $error) {
     print "Error while creating users table !: " . $error->getMessage() . "<br/>";
 	die();
 }
-
+try {
+	$db->query("CREATE TABLE IF NOT EXISTS images
+					(
+						img_id INT(6) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+						link TEXT NOT NULL,
+						pub_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+						author_id INT(6) NOT NULL,
+						nb_likes INT(6) NOT NULL DEFAULT 0
+					)");
+}
+catch (PDOException $error) {
+	print "Error while creating images table !: " . $error->getMessage() . "<br/>";
+	die();
+}
 ?>
 <html>
         <head>
