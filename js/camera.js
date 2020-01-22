@@ -32,6 +32,7 @@ window.addEventListener('resize', function(ev) {
     }
 });
 
+
 function get_drawing_sizes(src, dst) {
 
     var x, y, width, height,
@@ -45,6 +46,7 @@ function get_drawing_sizes(src, dst) {
     sizes.push(x, y, width, height);
     return (sizes);
 }
+
 
 function add_filter(filter) {
     if (streaming === false && video_img.src === "") {
@@ -70,6 +72,7 @@ function add_filter(filter) {
     };
 }
 
+
 function isImage(file) {
 
     var dot_index;
@@ -85,6 +88,7 @@ function isImage(file) {
     return (false);
 }
 
+
 function clear_filter_display(src) {
 
     var filter_canvas = document.getElementById("filter_canvas"),
@@ -96,6 +100,7 @@ function clear_filter_display(src) {
     filter_canvas.removeAttribute("height");
     g_filter_set = 0;
 }
+
 
 document.getElementById("send_img").addEventListener("click", function(ev) {
 
@@ -137,6 +142,7 @@ document.getElementById("send_img").addEventListener("click", function(ev) {
         msg.style.display = "block";
 });
 
+
 function delete_img(img) {
 
     if (confirm("Are you sure you want to delete this image ?")) {
@@ -166,6 +172,7 @@ function delete_img(img) {
     }
 }
 
+
 function reload_cam() {
     var back2cam = document.getElementById("back2cam");
 
@@ -179,6 +186,7 @@ function reload_cam() {
         streaming = true;
     }
 }
+
 
 function load_cam() {
 
