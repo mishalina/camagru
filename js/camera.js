@@ -32,7 +32,6 @@ window.addEventListener('resize', function(ev) {
     }
 });
 
-/*
 function get_drawing_sizes(src, dst) {
 
     var x, y, width, height,
@@ -46,8 +45,7 @@ function get_drawing_sizes(src, dst) {
     sizes.push(x, y, width, height);
     return (sizes);
 }
-*/
-/*
+
 function add_filter(filter) {
     if (streaming === false && video_img.src === "") {
         alert("Launch the camera or upload an image before choosing a picture");
@@ -71,7 +69,6 @@ function add_filter(filter) {
         g_filter_set = 1;
     };
 }
-*/
 
 function isImage(file) {
 
@@ -88,7 +85,6 @@ function isImage(file) {
     return (false);
 }
 
-/*
 function clear_filter_display(src) {
 
     var filter_canvas = document.getElementById("filter_canvas"),
@@ -100,7 +96,6 @@ function clear_filter_display(src) {
     filter_canvas.removeAttribute("height");
     g_filter_set = 0;
 }
-*/
 
 document.getElementById("send_img").addEventListener("click", function(ev) {
 
@@ -141,7 +136,7 @@ document.getElementById("send_img").addEventListener("click", function(ev) {
     if (msg.innerHTML !== "")
         msg.style.display = "block";
 });
-/*
+
 function delete_img(img) {
 
     if (confirm("Are you sure you want to delete this image ?")) {
@@ -170,7 +165,6 @@ function delete_img(img) {
         xhr.send("img=" + img.getAttribute("src"));
     }
 }
-*/
 
 function reload_cam() {
     var back2cam = document.getElementById("back2cam");
@@ -225,14 +219,13 @@ function load_cam() {
         }
     );
 
-/*
     function set_img_attributes(img) {
 
         img.setAttribute('class', 'photos');
         img.setAttribute('onclick', 'delete_img(this)');
         img.setAttribute('style', 'cursor:pointer');
     }
-*/
+
     video.addEventListener('canplay', function(ev) {
 
         if (!streaming) {
@@ -245,7 +238,7 @@ function load_cam() {
             back2cam.style.display = "none";
         }
     }, false);
-/*
+
     function takephoto(canvas) {
 
         canvas.getContext('2d').drawImage(video, 0, 0, video.offsetWidth, video.offsetHeight);
@@ -278,7 +271,7 @@ function load_cam() {
         else
             console.log("Data missing to save the photo");
     }
-*/
+
     startbutton.addEventListener('click', function(ev) {
 
         var img,

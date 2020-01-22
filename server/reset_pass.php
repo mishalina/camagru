@@ -13,7 +13,7 @@ $res = $query->fetch();
 if ($res == NULL)
     echo "Invalid username/email address.<br/>";
 else {
-    $new_passwd = bin2hex(random_bytes(5));
+    $new_passwd = bin2hex(openssl_random_pseudo_bytes(5));
     $hash_passwd = $db->quote(hash("whirlpool", $new_passwd));
     if (send_resetpass_mail($new_passwd, $email) == true)
         $db->query("UPDATE users SET password = $hash_passwd WHERE login = $login");

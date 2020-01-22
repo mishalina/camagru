@@ -25,7 +25,7 @@ function  send_confirmation_mail($login, $email, $token) {
 }
 function  send_resetpass_mail($passwd, $email) {
     $subject = "Camagru - Account password reset";
-    $link = "http://".$_SERVER['HTTP_HOST'].substr($_SERVER['SCRIPT_NAME'], 0, (strpos($_SERVER['SCRIPT_NAME'], "/", 1) + 1))."index.php";
+    $link = "http://".$_SERVER['HTTP_HOST'].substr($_SERVER['SCRIPT_NAME'], 0, (strpos($_SERVER['SCRIPT_NAME'], "/", 1) + 1))."../index.php";
     $content = "<html>
                 <head>
                   <title>Camagru - Account password reset</title>
