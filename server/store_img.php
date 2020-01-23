@@ -6,8 +6,8 @@ require_once('../config/database.php');
 require_once('merge_imgs.php');
 
 $user_id = $db->quote($_SESSION['logged']);
-$dir = dirname(__FILE__, 2)."/images/upload/";
-
+/*$dir = dirname(__FILE__, 2)."/images/upload/";*/
+$dir = "../images/upload/";
 if ($user_id === "") {
     echo "Error: No user logged";
     return ;

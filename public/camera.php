@@ -4,7 +4,7 @@
         <div id="view">
             <div id="cam_container">
                 <canvas id="filter_canvas"></canvas>
-                <video id="video" style="display: inherit" poster=""></video>
+                <video id="video" autoplay style="display: inherit" poster="images/icons/cam_default.jpg"></video>
                 <img id="video_img" alt="">
                 <button id="startbutton">Take a shot</button><br/>
                 <div id="filters_container"></div>
@@ -12,7 +12,7 @@
             <div id="upload_img">
                 <label for="img_file">Upload an image (JPEG/JPG/PNG format) :</label>
                 <input type="hidden" name="MAX_FILE_SIZE" value="4194304">
-                <input id="img_file" type="file" name="img_file"></input>
+                <input id="img_file" type="file" name="img_file">
                 <button id="send_img">Upload</button>
                 <p id="upload_msg" class="error_msg"></p>
                 <a id="back2cam" href="javascript:reload_cam()" style="display: none">Switch to the camera view</a>

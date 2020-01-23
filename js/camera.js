@@ -1,3 +1,5 @@
+/*media.peerconnection.enabled = true;*/
+
 window.addEventListener('load', function(ev) {
 
     var xhr = new XMLHttpRequest(),
@@ -197,17 +199,17 @@ function load_cam() {
         container = document.querySelector('#photos_container'),
         startbutton = document.querySelector('#startbutton'),
         back2cam = document.querySelector('#back2cam'),
-        canvas = document.createElement("canvas"),
+        canvas = document.createElement('canvas'),
         filter_canvas = document.querySelector('#filter_canvas'),
         g_width = 640,
         g_height = 480;
 
-    navigator.getMedia = ( navigator.getUserMedia ||
+    navigator.getUserMedia = ( navigator.getUserMedia ||
         navigator.webkitGetUserMedia ||
         navigator.mozGetUserMedia ||
         navigator.msGetUserMedia);
 
-    navigator.getMedia(
+    navigator.getUserMedia(
         {
             video: true,
             audio: false
@@ -216,12 +218,15 @@ function load_cam() {
             g_stream = stream;
             if (navigator.mozGetUserMedia) {
                 video.mozSrcObject = stream;
-            } else {
-                var vendorURL = window.URL || window.webkitURL;
-                video.src = vendorURL.createObjectURL(stream);
+            }
+            else {
+                var vendorURL = window.URL || window.webkitURL || window.mozURL || window.msURL;
+                video.srcObject = stream;
+                /*video.src = vendorURL.createObjectURL(stream) || stream;*/
             }
             video.play();
         },
+
         function(err) {
             console.log("An error occured! " + err);
         }
