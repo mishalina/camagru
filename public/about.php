@@ -30,6 +30,7 @@
 	</div>
 	</main>
 	<?php require_once('footer.php'); ?>
+		<script src='../js/about.js'></script>
 	</body>
 </html>
 

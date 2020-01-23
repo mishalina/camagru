@@ -29,6 +29,31 @@ catch (PDOException $error) {
 	print "Error while creating images table !: " . $error->getMessage() . "<br/>";
 	die();
 }
+try {
+	$db->query("CREATE TABLE IF NOT EXISTS comments
+					(
+						com_id INT(6) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+						img_id INT(6) NOT NULL,
+						author_id INT(6) NOT NULL,
+						content MEDIUMTEXT NOT NULL
+					)");
+}
+catch (PDOException $error) {
+	print "Error while creating comments table !: " . $error->getMessage() . "<br/>";
+	die();
+}
+try {
+	$db->query("CREATE TABLE IF NOT EXISTS likes
+					(
+						like_id INT(6) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+						img_id INT(6) NOT NULL,
+						author_id INT(6) NOT NULL
+					)");
+}
+catch (PDOException $error) {
+	print "Error while creating likes table !: " . $error->getMessage() . "<br/>";
+	die();
+}
 ?>
 <html>
         <head>

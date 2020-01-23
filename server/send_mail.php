@@ -17,7 +17,7 @@ function  send_confirmation_mail($login, $email, $token) {
     $headers  = 'MIME-Version: 1.0'."\r\n";
     $headers .= 'Content-type: text/html;charset=utf-8'."\r\n";
     $headers .= 'To: '.$login.' <'.$email.'>'."\r\n";
-    $headers .= 'From: Camagru WebApp <noreply@camagru.fr>'."\r\n";
+    $headers .= 'From: Camagru WebApp <noreply@camagru.ru>'."\r\n";
     if (mail($email, $subject, $content, $headers) == true)
         return (true);
     else
@@ -40,7 +40,7 @@ function  send_resetpass_mail($passwd, $email) {
     $headers  = 'MIME-Version: 1.0'."\r\n";
     $headers .= 'Content-type: text/html;charset=utf-8'."\r\n";
     $headers .= 'To: '.$email."\r\n";
-    $headers .= 'From: Camagru WebApp <noreply@camagru.fr>'."\r\n";
+    $headers .= 'From: Camagru WebApp <noreply@camagru.ru>'."\r\n";
     if (mail($email, $subject, $content, $headers) == true)
         return (true);
     else
