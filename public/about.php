@@ -10,7 +10,7 @@
 		<title>Camagru - About</title>
 	</head>
 	<body>
-	<?php require_once('header.php'); ?>
+	<?php require_once('header2.php'); ?>
 	<main>
 	<h1>About / Contact</h1>
 	<div id="contact_form" class="forms">
