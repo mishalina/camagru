@@ -10,7 +10,7 @@
 			echo "<li style='float:right'><a href='".$root."server/logout.php'>to logout</a></li>";
 		else
 		{
-			echo "<li style='float:right'><a href='".$root."'>you're logout</a></li>";
+			echo "<li style='float:right'><a href=''>you're logout</a></li>";
 		}
 	?>
 	</ul>
